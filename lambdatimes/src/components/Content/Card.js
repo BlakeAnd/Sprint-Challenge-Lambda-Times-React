@@ -6,6 +6,7 @@ const Card = props => {
   return (
     <div className="card">
       <div className="headline">{props.card.headline/* headline goes here */}</div>
+      <div>{props.card.tab}</div>
       <div className="author">
         <div className="img-container">
           <img src={props.card.img/* image source goes here */} />
@@ -16,8 +17,9 @@ const Card = props => {
   );
 };
 
+/*
 Card.propTypes = {
-  card: PropTypes.arrayOf(PropTypes.shape({
+  card: PropTypes.objectOf(PropTypes.shape({
     author: PropTypes.string,
     headline: PropTypes.string,
     img: PropTypes.string,
@@ -25,6 +27,7 @@ Card.propTypes = {
     
   }))
 }
+*/
 // Make sure to include PropTypes.
 
 export default Card;

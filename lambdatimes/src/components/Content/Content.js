@@ -26,6 +26,13 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+    let clickedTab = tab.target.value;
+    console.log('change check', tab.target.value);
+    this.setState({
+      //selected: wht is clicked
+      selected: clickedTab
+    })
+    
   };
 
   filterCards = () => {
@@ -51,8 +58,12 @@ export default class Content extends Component {
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
-        */}
-        <Tabs tabs={this.state.tabs} />
+        */console.log('change check 2', this.state.selected)}
+        <Tabs 
+        tabs={this.state.tabs} 
+        selectedTab={this.state.selected}
+        selectTabHandler={this.changeSelected}
+        />
         <Cards cards={this.filterCards()} />
       </div>
     );
