@@ -17,17 +17,17 @@ const Card = props => {
   );
 };
 
-/*
+
 Card.propTypes = {
-  card: PropTypes.objectOf(PropTypes.shape({
+ 
     author: PropTypes.string,
     headline: PropTypes.string,
     img: PropTypes.string,
     tab: PropTypes.string
     
-  }))
+
 }
-*/
+
 // Make sure to include PropTypes.
 
 export default Card;
