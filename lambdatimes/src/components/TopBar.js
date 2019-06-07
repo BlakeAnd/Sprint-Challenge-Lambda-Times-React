@@ -23,7 +23,7 @@ const Container = styled.div`
 `;
 const ContainerLeft = styled.div`
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
 flex-direction: row;
 flex: 1;
@@ -36,6 +36,7 @@ align-items: center;
 flex-direction: row;
 flex: 3;
 font-size: 9px;
+margin: 0 5%;
 `;
 const ContainerRight = styled.div`
   display: flex;
@@ -49,12 +50,12 @@ const ContainerRight = styled.div`
 
 const SpanLeft = styled.div`
 cursor: pointer;
-margin-right: 25%;
+margin-right: 40%;
 font-weight: bold;
 `;
 const Span = styled.div`
 cursor: pointer;
-margin: 0 2%;
+margin-left: 6%;
 `;
 const Last = styled.div`
 
@@ -71,12 +72,12 @@ const TopBar = () => {
         <ContainerLeft >
           <SpanLeft>TOPICS</SpanLeft><SpanLeft>SEARCH</SpanLeft>
         </ContainerLeft>
-        <ContainerRight >
-          <Span>GENERAL</Span><Span>BROWNBAG</Span><Span>RANDOM</Span><Span>MUSIC</Span><Last>ANNOUNCEMENTS</Last>
-        </ContainerRight>
         <ContainerCenter >
-          <span>LOG IN</span>
+          <Span>GENERAL</Span><Span>BROWNBAG</Span><Span>RANDOM</Span><Span>MUSIC</Span><Span>ANNOUNCEMENTS</Span>
         </ContainerCenter>
+        <ContainerRight >
+          <span>LOG IN</span>
+        </ContainerRight>
       </Container>
     </TopBarStyle>
   )
